@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/News"
+        android:icon="@mipmap/ic_news"
+        android:title="Новости" />
+    <item
+        android:id="@+id/TimeTable"
+        android:icon="@mipmap/ic_timetable"
+        android:title="Расписание" />
+    <item
+        android:id="@+id/Contact"
+        android:icon="@mipmap/ic_contacts"
+        android:title="Контанкты" />
+
+</menu>
