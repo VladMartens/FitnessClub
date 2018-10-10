@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FitnessClubPro</string>
+    <string name="FACEBOOK_APP_ID">334376110445847</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">[ACCOUNT_KIT_CLIENT_TOKEN]</string>
 </resources>

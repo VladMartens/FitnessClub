@@ -29,6 +29,11 @@ public class TimetableAdapter extends RecyclerView.Adapter<TimetableAdapter.View
         this.ctx = ctx;
     }
 
+    public void setTimeTableParses(List<TimeTableParse> timeTableParses) {
+        this.timeTableParses = timeTableParses;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public TimetableAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -70,4 +75,5 @@ public class TimetableAdapter extends RecyclerView.Adapter<TimetableAdapter.View
             });
         }
     }
+
 }

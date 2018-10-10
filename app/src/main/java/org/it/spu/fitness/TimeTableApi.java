@@ -4,6 +4,6 @@ import io.reactivex.Observable;
 import retrofit2.http.GET;
 
 public interface TimeTableApi {
-    @GET("/api/v1/schedules")
+    @GET("/api/1.0/shared/schedules")
     Observable<GetTimeTableResponse> getTimeTable();
 }

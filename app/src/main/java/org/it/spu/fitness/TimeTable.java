@@ -62,7 +62,14 @@ public class TimeTable extends AppCompatActivity {
     void GetTimeTable() {
         timeTableApi.getTimeTable().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((GetTimeTableResponse response) -> {
-
+                    for (int i = 0; i < response.getData().size(); i++) {
+                        timeTableParses.add(new TimeTableParse(
+                                response.getData().get(i).getDay().getNameDay(),
+                                response.getData().get(i).getStarttime(),
+                                response.getData().get(i).getScheduleEvent().getName(),
+                                response.getData().get(i).getScheduleEvent().getDescription()));
+                    }
+                    adapterTable.setTimeTableParses(timeTableParses);
                 });
     }
 
@@ -78,7 +85,7 @@ public class TimeTable extends AppCompatActivity {
         initToolbar();
 
         timeTableApi = FitnessApp.get(this).getRetrofit().create(TimeTableApi.class);
-
+        GetTimeTable();
         adapterTable = new TimetableAdapter(timeTableParses, this);
 
         recyclerView = findViewById(R.id.recycler);

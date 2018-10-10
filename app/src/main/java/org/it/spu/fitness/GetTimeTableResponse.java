@@ -126,7 +126,7 @@ public class GetTimeTableResponse {
         private Day day;
         @SerializedName("starttime")
         @Expose
-        private Integer starttime;
+        private String starttime;
         @SerializedName("scheduleEvent")
         @Expose
         private ScheduleEvent scheduleEvent;
@@ -147,11 +147,11 @@ public class GetTimeTableResponse {
             this.day = day;
         }
 
-        public Integer getStarttime() {
+        public String getStarttime() {
             return starttime;
         }
 
-        public void setStarttime(Integer starttime) {
+        public void setStarttime(String starttime) {
             this.starttime = starttime;
         }
 
@@ -162,5 +162,6 @@ public class GetTimeTableResponse {
         public void setScheduleEvent(ScheduleEvent scheduleEvent) {
             this.scheduleEvent = scheduleEvent;
         }
+
     }
 }
